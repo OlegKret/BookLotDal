@@ -33,6 +33,7 @@ namespace BookLotDal.Models
         [Index("IDX_OrderItem_Total", IsUnique = false)]
         [Column(TypeName = "Money")]
         public int Total { get; set; }
+       
 
         [Timestamp]
         public byte[] Timestamp { get; set; }

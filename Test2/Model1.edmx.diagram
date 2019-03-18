@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e5fc6e6e8f92496bbd50ec79c19b7b82" Name="Diagram1">
+        <EntityTypeShape EntityType="BookLotModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookLotModel.Authors" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookLotModel.Books" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookLotModel.Customer" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookLotModel.OrderItems" Width="1.5" PointX="7.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookLotModel.Orders" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookLotModel.Publishers" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookLotModel.SalesBook" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <AssociationConnector Association="BookLotModel.FK_dbo_Books_dbo_Authors_AuthorId" ManuallyRouted="false" />
+        <AssociationConnector Association="BookLotModel.FK_dbo_Books_dbo_Publishers_PublisherId" ManuallyRouted="false" />
+        <AssociationConnector Association="BookLotModel.FK_dbo_OrderItems_dbo_Books_BookId" ManuallyRouted="false" />
+        <AssociationConnector Association="BookLotModel.FK_dbo_SalesBook_dbo_Books_BookId" ManuallyRouted="false" />
+        <AssociationConnector Association="BookLotModel.FK_dbo_Orders_dbo_Customer_CustId" ManuallyRouted="false" />
+        <AssociationConnector Association="BookLotModel.FK_dbo_OrderItems_dbo_SalesBook_SalesBook_SalesBookId" ManuallyRouted="false" />
+        <AssociationConnector Association="BookLotModel.FK_dbo_Orders_dbo_OrderItems_OrderItem_OrderId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

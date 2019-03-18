@@ -24,7 +24,7 @@ namespace BookLotDal.Models
         public int Quantity { get; set; }
 
         [Index("IDX_OrderItem_Price", IsUnique = false)]
-        [Column(TypeName ="Money")]
+        [Column(TypeName = "Money")]
         public int Price { get; set; }
 
         [Timestamp]
