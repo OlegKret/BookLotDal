@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BookLotDal.Repos
 {
-    interface IRepo<T>
+    
+    public interface IRepo<T>
     {
         int Add(T entity);
         Task<int> AddAsync(T entity);
