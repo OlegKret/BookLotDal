@@ -14,7 +14,7 @@ namespace WcfServiceBooks
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service2.svc or Service2.svc.cs at the Solution Explorer and start debugging.
     public class Service2 : IAccount
     {
-        string localpath = "ftp:// ftp://OlegKret.somee.com/www.OlegKret.somee.com/WCFServiseBooks/App_Data/Users/Photo/";
+        string localpath = "ftp:// ftp://OlegKret.somee.com/www.OlegKret.somee.com/WCFServiceBooks/App_Data/Users/Photo/";
 
         public User Login(string login, string password)
         {
