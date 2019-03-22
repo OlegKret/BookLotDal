@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfServiceBooks.DAL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfServiceBooks.DAL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Books">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuthorId" type="xs:int" />
+      <xs:element minOccurs="0" name="BookId" type="xs:int" />
+      <xs:element minOccurs="0" name="Condition" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Genre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ISBN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:int" />
+      <xs:element minOccurs="0" name="PublicationYear" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PublisherId" type="xs:int" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Books" nillable="true" type="tns:Books" />
+  <xs:complexType name="ArrayOfBooks">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Books" nillable="true" type="tns:Books" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBooks" nillable="true" type="tns:ArrayOfBooks" />
+</xs:schema>

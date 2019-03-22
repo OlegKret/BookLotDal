@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test2", "Test2\Test2.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceBooks", "WcfServiceBooks\WcfServiceBooks.csproj", "{8E60E5F7-4D1E-4F7F-8742-5DF56F205053}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookServise", "BookServise\BookServise.csproj", "{5748758F-D2E5-4FB9-92FD-8803EA532A96}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8E60E5F7-4D1E-4F7F-8742-5DF56F205053} = {8E60E5F7-4D1E-4F7F-8742-5DF56F205053}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +56,14 @@ Global
 		{8E60E5F7-4D1E-4F7F-8742-5DF56F205053}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8E60E5F7-4D1E-4F7F-8742-5DF56F205053}.Release|x64.ActiveCfg = Release|Any CPU
 		{8E60E5F7-4D1E-4F7F-8742-5DF56F205053}.Release|x64.Build.0 = Release|Any CPU
+		{5748758F-D2E5-4FB9-92FD-8803EA532A96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5748758F-D2E5-4FB9-92FD-8803EA532A96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5748758F-D2E5-4FB9-92FD-8803EA532A96}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5748758F-D2E5-4FB9-92FD-8803EA532A96}.Debug|x64.Build.0 = Debug|Any CPU
+		{5748758F-D2E5-4FB9-92FD-8803EA532A96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5748758F-D2E5-4FB9-92FD-8803EA532A96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5748758F-D2E5-4FB9-92FD-8803EA532A96}.Release|x64.ActiveCfg = Release|Any CPU
+		{5748758F-D2E5-4FB9-92FD-8803EA532A96}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

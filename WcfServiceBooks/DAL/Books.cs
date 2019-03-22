@@ -17,7 +17,12 @@ namespace WcfServiceBooks.DAL
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int BookId { get; set; }
 
-      
+        [DataMember]
+        public int AuthorId { get; set; }
+
+        [DataMember]
+        public int PublisherId { get; set; }
+
         [DataMember]
         [StringLength(50)]
         public string Title { get; set; }
