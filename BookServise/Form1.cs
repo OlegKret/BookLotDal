@@ -79,8 +79,11 @@ namespace BookServise
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            //Service1Client client = new Service1Client();
+            
             Books books = new Books();
+            //client.Add(books);
+            //client.Save(books);
             books.AuthorId = Int32.Parse(txtAuthorId.Text);
             books.PublisherId = Int32.Parse(txtPublisherId.Text);
             books.Title = txtTitle.Text;
@@ -144,6 +147,16 @@ namespace BookServise
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            label11.Text = "You login as :" + ((Form)this.MdiParent).Controls["label1"].Text;
+            if (((Form)this.MdiParent).Controls["label1"].Text != "Admin")
+            {
+                btnClear.Enabled = false;
+                btnSave.Enabled = false;
+                btnDelete.Enabled = false;
+                
+                btnUpdate.Enabled = false;
+               
+            }
             using (var context = new BookLotEntities())
             {
                 //foreach (Books c in context.Books)

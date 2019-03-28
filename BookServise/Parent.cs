@@ -8,38 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Test2
+namespace BookServise
 {
     public partial class Parent : Form
     {
-        
-
         public Parent(string role)
         {
             InitializeComponent();
             label1.Text = role;
         }
 
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //FileDialog 
-        }
-
-        private void biodataToolStripMenuItem_Click(object sender, EventArgs e)
+        private void booksToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form1 ss = new Form1();
             ss.MdiParent = this;
             ss.Show();
-        }
-
-        private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void statusStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
         }
     }
 }

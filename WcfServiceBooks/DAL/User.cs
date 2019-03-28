@@ -40,12 +40,25 @@ namespace WcfServiceBooks.DAL
         [DataMember]
         [StringLength(50)]
         [Required]
-        public string PhotoName { get; set; }
+        public string role { get; set; }
 
+        //[DataMember]
+        //[Required]
+        //public byte Image { get; set; }
 
         [DataMember]
-        [NotMapped]
-        public byte[] Photo { get; set; }
+        [StringLength(150)]
+        public string Pic { get; set; }
+
+        //[DataMember]
+        //[StringLength(50)]
+        //[Required]
+        //public string PhotoName { get; set; }
+
+
+        //[DataMember]
+        //[NotMapped]
+        //public byte[] Photo { get; set; }
 
     }
 }

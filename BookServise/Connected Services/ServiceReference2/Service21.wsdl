@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://OlegKret.somee.com/BOOOOK" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://OlegKret.somee.com/BOOOOK" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://OlegKret.somee.com/BOOOOK/Imports">
+      <xsd:import schemaLocation="http://localhost:57512/Service2.svc?xsd=xsd0" namespace="http://OlegKret.somee.com/BOOOOK" />
+      <xsd:import schemaLocation="http://localhost:57512/Service2.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:57512/Service2.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfServiceBooks.DAL" />
+      <xsd:import schemaLocation="http://localhost:57512/Service2.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAccount_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_Add_InputMessage">
+    <wsdl:part name="parameters" element="tns:Add" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_Add_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_AddRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRange" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_AddRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_Save_InputMessage">
+    <wsdl:part name="parameters" element="tns:Save" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_Save_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_GetOne_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOne" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_GetOne_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_GetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAll" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_GetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_ExecuteQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteQuery" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_ExecuteQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_ConvertFiltoBite_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertFiltoBite" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_ConvertFiltoBite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertFiltoBiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_GetStream_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStream" />
+  </wsdl:message>
+  <wsdl:message name="IAccount_GetStream_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStreamResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAccount">
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/Login" message="tns:IAccount_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/LoginResponse" message="tns:IAccount_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/Register" message="tns:IAccount_Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/RegisterResponse" message="tns:IAccount_Register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <wsdl:input wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/Add" message="tns:IAccount_Add_InputMessage" />
+      <wsdl:output wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/AddResponse" message="tns:IAccount_Add_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRange">
+      <wsdl:input wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/AddRange" message="tns:IAccount_AddRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/AddRangeResponse" message="tns:IAccount_AddRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Save">
+      <wsdl:input wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/Save" message="tns:IAccount_Save_InputMessage" />
+      <wsdl:output wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/SaveResponse" message="tns:IAccount_Save_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/Delete" message="tns:IAccount_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/DeleteResponse" message="tns:IAccount_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOne">
+      <wsdl:input wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/GetOne" message="tns:IAccount_GetOne_InputMessage" />
+      <wsdl:output wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/GetOneResponse" message="tns:IAccount_GetOne_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAll">
+      <wsdl:input wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/GetAll" message="tns:IAccount_GetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/GetAllResponse" message="tns:IAccount_GetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteQuery">
+      <wsdl:input wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/ExecuteQuery" message="tns:IAccount_ExecuteQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/ExecuteQueryResponse" message="tns:IAccount_ExecuteQuery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertFiltoBite">
+      <wsdl:input wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/ConvertFiltoBite" message="tns:IAccount_ConvertFiltoBite_InputMessage" />
+      <wsdl:output wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/ConvertFiltoBiteResponse" message="tns:IAccount_ConvertFiltoBite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStream">
+      <wsdl:input wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/GetStream" message="tns:IAccount_GetStream_InputMessage" />
+      <wsdl:output wsaw:Action="http://OlegKret.somee.com/BOOOOK/IAccount/GetStreamResponse" message="tns:IAccount_GetStream_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
